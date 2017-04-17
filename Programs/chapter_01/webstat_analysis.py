@@ -19,6 +19,8 @@ def plot_models(x, y, models=None):
 	for model, style, color in zip(models, linestyles, colors):
 		plt.plot(fx, model(fx), linestyle=style, linewidth=2, c=color)
 
+	plt.legend(["d=%i" % model.order for model in models], loc="upper left")
+
 	plt.autoscale(tight=False)
 	plt.grid()
 	plt.show()
